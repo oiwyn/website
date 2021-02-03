@@ -1,0 +1,13 @@
+.help{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 15vh;
+    .notfound{
+        text-align: center;
+        .top{
+            border-bottom: 1px solid #eee;
+        }
+    }
+}

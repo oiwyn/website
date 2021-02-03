@@ -1,0 +1,246 @@
+.resume{
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 60px 60px;
+        &::before{
+            content: "";
+            background: url("../../img/brand-logo.svg") 00 no-repeat;
+            transform: rotate(-45deg);
+            width: 600px;
+            height: 338px;
+            position: absolute;
+            z-index: 0;
+            opacity: 1;
+            top: 0;
+            right: 0;
+            padding: 50px;
+        }
+    }
+    .page{
+        display: flex;
+        flex: row;
+        justify-content: space-between;
+        max-width: 1440px;
+        padding: 50px 70px;
+        border-radius: 5px;
+        border: 1px solid #222;
+        background-color: #fcfcfc;
+        z-index: 1;
+        box-shadow: 5px 5px #667EFF;
+        h1{
+            font-weight: 500;
+            font-size: 36px;
+            margin: 20px 0px 50px -2px;
+        }
+        .work-experience{
+            max-width: 75%;
+            article{
+                margin-bottom: 20px;
+                &:last-of-type{
+                    margin-bottom: 0px;
+                }
+                h2{
+                    font-weight: 600;
+                    font-size: 16px;
+                    display: inline-block;
+                    span{
+                        margin-left: 10px;
+                        font-weight: 500;
+                        font-size: 16px;
+                        color: #667EFF;
+                        display: inline-block;
+                    }
+                }
+                span{
+                    font-weight: 500;
+                    font-size: 14px;
+                    color: #999;
+                    margin: -10px 0px 5px;
+                    display: block;
+                }
+                p{
+                    width: 50%;
+                    font-size: 15px;
+                    color: #454545;
+                    margin: 0;
+                }
+            }
+        }
+        .education-skills{
+            max-width: 25%;
+            margin-top: 95px;
+            padding-left: 35px;
+            article{
+                margin-bottom: 20px;
+                &:last-of-type{
+                    margin-bottom: 0px;
+                }
+                h2{
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: #667EFF;
+                    margin-bottom: -10px;
+                    &.-first{
+                        margin-bottom: 0px;
+                    }
+                }
+                h3{
+                    font-weight: 500;
+                    font-size: 16px;
+                    margin-top: 10px;
+                }
+                span{
+                    font-weight: 500;
+                    font-size: 14px;
+                    color: #999;
+                    margin: -10px 0px 5px;
+                    display: block;
+                }
+                p{
+                    font-size: 15px;
+                    color: #454545;
+                    margin: 0;
+                }
+                ul{
+                    visibility: visible;
+                    list-style-type: none;
+                    padding: 0;
+                    li{
+                        font-size: 15px;
+                        color: #454545;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .resume{
+        .container{
+            width: 100%;
+            padding: 0px;
+            &::before{
+                opacity: .3;
+                // display: none;
+            }
+            .page{
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: flex-start;
+                width: 100%;
+                border-radius: 0px;
+                border-width: 1px 0px 0px 0px;
+                padding: 0px;
+                box-shadow: none;
+                .work-experience{
+                    padding: 0px 20px;
+                    max-width: 100%;
+                    h1{
+                        margin: 30px 0px 25px;
+                        font-size: 30px;
+                        letter-spacing: -.5px;
+                        line-height: 36px;
+                    }
+                    article{
+                        h2{
+                            font-size: 16px;
+                            span{
+                                font-size: 16px;
+                                margin: 5px 0px;
+                                display: block;
+                            }
+                        }
+                        span{
+                            margin: -15px 0px 10px;
+                            font-size: 14px;
+                        }
+                        p{
+                            width: 100%;
+                        }
+                    }
+                }
+                .education-skills{
+                    border-top: 1px solid #eee;
+                    margin: 20px 0px 0px;
+                    padding: 5px 20px 20px;
+                    max-width: 100%;
+                }
+            }
+        }
+        .links-container{
+            .links-area{
+                width: 100%;
+                h1{
+                    font-size: 24px;
+                    letter-spacing: -.5px;
+                    line-height: 36px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .resume{
+        .container{
+            padding: 0px 30px 60px;
+            &::before{
+                opacity: .3;
+                // display: none;
+            }
+            .page{
+                display: flex;
+                flex-flow: column wrap;
+                width: 100%;
+                padding: 0px;
+                .work-experience{
+                    padding: 0px 30px;
+                    max-width: 100%;
+                    h1{
+                        margin: 30px 0px 25px;
+                        font-size: 36px;
+                        letter-spacing: -.3px;
+                        line-height: 48px;
+                    }
+                    article{
+                        h2{
+                            font-size: 16px;
+                            span{
+                                font-size: 16px;
+                                margin: 5px 0px;
+                                display: block;
+                            }
+                        }
+                        span{
+                            margin: -15px 0px 10px;
+                            font-size: 14px;
+                        }
+                        p{
+                            width: 100%;
+                        }
+                    }
+                }
+                .education-skills{
+                    border-top: 1px solid #eee;
+                    margin: 20px 0px 0px;
+                    padding: 5px 30px 20px;
+                    max-width: 100%;
+                }
+            }
+        }
+        .links-container{
+            .links-area{
+                width: 100%;
+                h1{
+                    font-size: 24px;
+                    letter-spacing: -.5px;
+                    line-height: 36px;
+                }
+            }
+        }
+    }
+}

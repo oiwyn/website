@@ -1,0 +1,90 @@
+@mixin transition{
+    -webkit-transition: all 100ms cubic-bezier(.165, .84, .44, 1);
+    transition: all 100ms cubic-bezier(.165, .84, .44, 1);
+}
+
+@mixin link-hover{
+    &:hover{
+        background-color: #f2f2f3;
+        cursor: pointer;
+    }
+}
+
+
+body{
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    &::-webkit-scrollbar{
+        background-color: #fff;
+        width: 10px;
+        height: 10px;
+    }
+    &::-webkit-scrollbar-track{
+        background-color: transparent;
+    }
+    &:hover > ::-webkit-scrollbar-thumb {
+        background-color: #a0a0a5;
+      }
+    &::-webkit-scrollbar-thumb{
+        background-color: #ccc;
+        border-radius:16px;
+        border: 2px solid #fff;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background-color:#a0a0a5;
+    }
+    &::-webkit-scrollbar-button{
+        display:none;
+    }
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 40px 60px 50px;
+    position: relative;
+    z-index: 1;
+    .brand-text{
+        padding: 10px 20px;
+        margin: -10px;
+        border-radius: 5px;
+        @include transition;
+        @include link-hover;
+    }
+    ul{
+        visibility: visible;
+        display: flex;
+        list-style-type: none;
+        li{
+            height: 100%;
+            padding: 10px 20px 0px 20px;
+            border-radius: 5px;
+            @include transition;
+            @include link-hover;
+        }
+    }
+}
+
+.main-container{
+    padding-bottom: 240px;
+}
+
+@media only screen and (max-width: 768px) {
+    nav{
+        padding: 30px 20px;
+        .brand-text{
+            padding: 10px;
+            margin-left: -9px;
+            margin-top: 0px;
+            font-size: 16px;
+        }
+        ul{
+            margin-right: -11px;
+            li{
+                padding: 10px 10px 0px 10px;
+                font-size: 16px;
+            }
+        }
+    }
+}

@@ -218,8 +218,7 @@
                             border: 1px solid #222;
                             border-radius: 5px 5px 0px 0px;
                             img{
-                                width: 100%;
-                                height: 100%;
+                                max-width: 100%;
                             }
                         }
                         .properties{
@@ -390,6 +389,9 @@
                     }
                     article{
                         .content{
+                            .header .cover img{
+                                width: 100%;
+                            }
                             .properties{
                                 flex-flow: column;
                                 div{

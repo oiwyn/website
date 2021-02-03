@@ -51,7 +51,7 @@ export const workContent = [
         image: require("./pronoviastw/cover.png").default,
         desc: {
             type: "Website Design",
-            client: "まさひろ酒造株式会社 (2019)",
+            client: "ClubMax Studio (2020)",
             tools: "CSS, WordPress",
             content: "My position at Club Max, a wedding oriented company located at Taipei and one of the Pronovias dresses distributor in Taiwan, required me to design a website that allows our clients to browse dresses and book appointment online.\n\nSince our time was limited, the management and the sales teams decided to build the website on Wix as they found Wix had the easiest system for them to manage.\nAs Wix's features were limited, my work was mostly on designing the website layout, daily troubleshooting, and weekly dresses database management."
         },

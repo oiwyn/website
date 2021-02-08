@@ -15,11 +15,10 @@ export default function Home(){
                     Designer, coder, and sometimes both.
                     </h1>
                     <h1>
-                    I'm a graphic and user interface designer who
-                    loves creating <b>beautiful</b> and <em>delightful</em> design experiences.
+                    I'm a graphic and user interface designer who loves creating <b>beautiful</b> and <em>delightful</em> design experiences.
                     </h1>
                     <h1>
-                    Currently a UI/UX designer in Taipei, TW.
+                    Currently a UI/UX designer based in Taipei, TW.
                     </h1>
                 </div>
             </section>

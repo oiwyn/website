@@ -57,7 +57,7 @@ export const workContent = [
             content: "Masahiro is a sake brewery company located in Okinawa, Japan that is famous for its awamori.\n\nThe company was trying to expand its business to Taiwan and was looking to build a simple responsive landing page that can convey its brand and present its products without being overwhelming.",
         },
         misc:{
-            live: "https://masahiro.com.tw",
+            live: "../work/awamori-masahiro/preview/",
             figma:{
                 value: false,   
             },

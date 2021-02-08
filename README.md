@@ -2,7 +2,7 @@
 
 # Personal Website
 ---
-Built on React.
+Built on React. Designed on Figma.
 
 # Background
 ---

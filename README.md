@@ -2,4 +2,8 @@
 
 # Personal Website
 ---
-Built based on React, new design and all.
+Built on React.
+
+# Background
+---
+Was pissed because my old website (built on GatsbyJS) had routing issues, thought it was an issue with my code, which led me to relearned JavaScript on freecodecamp.org (highly, highly recommended) and later decided to built a new one on React. Oh and the issues that I talked about? Turned out it was Netlify specific issue that I also encountered after having built the new site -- luckily it got fix with a simple __redirects file.

@@ -14,7 +14,7 @@ import {Helmet} from 'react-helmet';
 export default function App() {
     return(
         <div className="main-container">
-            <Helmet titleTemplate="%s Owynn" defaultTitle="Owynn Kenli | A designer, coder, and sometimes both"/>
+            <Helmet titleTemplate="%s Owynn" defaultTitle="Owynn Kenli | Designer"/>
             <nav>
                 <Link to="/">
                     <div className="brand-text">

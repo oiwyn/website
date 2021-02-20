@@ -14,7 +14,7 @@ export const workContent = [
             live: false,
             figma:{
                 value: true,
-                link: "https://www.figma.com/proto/2DtKBRlrGBS6sH0d300YXg/URANIME?node-id=1%3A2&scaling=scale-down-width",   
+                link: "https%3A%2F%2Fwww.figma.com%2Fproto%2F2DtKBRlrGBS6sH0d300YXg%2FURANIME%3Fnode-id%3D1%253A2%26scaling%3Dscale-down",   
             },
             image:{
                 cover: require("./uranime/header.png").default,

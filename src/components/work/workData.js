@@ -37,7 +37,7 @@ export const workContent = [
             live: "https://oiwyn.github.io/express-bahari/",
             figma:{
                 value: true,
-                link: "https://www.figma.com/proto/r0eXArW9CuWvagdOSXOhCb/Express-Bahari?node-id=1%3A2&viewport=-358%2C344%2C1.1474144458770752&scaling=scale-down-width",   
+                link: "https%3A%2F%2Fwww.figma.com%2Fproto%2Fr0eXArW9CuWvagdOSXOhCb%2FExpress-Bahari%3Fnode-id%3D1%253A2%26scaling%3Dscale-down",   
             },
             image:{
                 cover: require("./expressbahari/header.png").default,

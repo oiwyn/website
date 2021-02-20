@@ -78,7 +78,7 @@ function WorkDetail({match}){
                                                     <img src={detail.misc.image.content} alt={"content-"+detail.id}/>
                                                 </div>
                                                 <div className="tab-content">
-                                                    <iframe id={detail.id} title={detail.title} src={"https://www.figma.com/embed?embed_host=share&url="+detail.misc.figma.link} allowFullScreen/>
+                                                    <iframe id={detail.id} title={detail.title} src={"https://www.figma.com/embed?embed_host=owynn&url="+detail.misc.figma.link} allowFullScreen/>
                                                 </div>
                                             </div>
                                         </div>

@@ -5,7 +5,7 @@ export const resumeContent =
                 company: "Cefinity",
                 position: "Graphic and UI Designer",
                 year: "August 2020 - January 2021",
-                desc: "Provided both marketing and development team with high quality and UI designs that emphasizes both UX and look. During my tenure, I also helped the development team with front-end issues."        
+                desc: "Provided both marketing and development team with high quality and UI designs for their upcoming web app that emphasizes both UX and look. During my tenure, I also helped the development team with front-end issues."        
             },
             {
                 company: "For One Dream",
@@ -16,8 +16,8 @@ export const resumeContent =
             {
                 company: "Express Bahari",
                 position: "Web Designer and UI/UX Designer",
-                year: "December 2018 - February 2019",
-                desc: "During my short stay in Indonesia, I developed and redesigned the company's website that translated to 40% increase in user retention and 10% increase in conversion rate. Also designed their mobile app UI and helped declared a simple design identity."        
+                year: "December 2018 - April 2019",
+                desc: "Developed and redesigned the company's website that translated to 40% increase in user retention and 10% increase in conversion rate. I also designed their mobile app UI and helped declared a simple design identity."        
             },
             {
                 company: "Revival ID / RevivalTV",

@@ -1,9 +1,10 @@
 import './Work.scss';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {NavLink, Route} from 'react-router-dom';
 import {workContent} from './workData';
 import PageTitle from '../PageTitle';
-import Twemoji from '../Twemoji'
+import Twemoji from '../Twemoji';
+import ReactMarkdown from 'react-markdown/with-html';
 
 let TITLE = "Work by";
 
@@ -24,6 +25,29 @@ function WorkIntro(){
 
 function WorkDetail({match}){
     const detail = workContent.find(({id}) => id === match.params.workId)
+    
+    const CaseMarkdown = () =>{ //used to render markdown file from each folder to each work page; src: https://jacobwicks.github.io/2020/06/19/rendering-markdown-and-resizing-images-with-react-markdown.html
+        const [input, setInput] = useState("")
+        const getInput = async() => {
+            const casePath = detail.desc.case.url
+            try {
+                const caseFile = await fetch(casePath)
+                const caseText = await caseFile.text()
+                setInput(caseText)
+            } catch(err){
+                console.error("Problem loading the case study file!", err)
+            }
+        }
+    
+        useEffect(() => {
+            getInput();
+        }, []); 
+
+        return <ReactMarkdown
+                escapeHtml={false}
+                source={input}
+                />
+    }
 
     return(
         <div>
@@ -59,6 +83,12 @@ function WorkDetail({match}){
                                     <a href={detail.misc.live} target="_blank" rel="noreferrer"><Twemoji emoji="🔗"/>&nbsp;&nbsp;View Site</a>
                                 </div>
                             ) : null }
+                        {detail.desc.case.exist !== false ?
+                            (
+                                <div className="journal">
+                                    <CaseMarkdown/>
+                                </div>
+                            ) : null}
                         </p>
                     </div>
                     <div className="media">
@@ -69,7 +99,7 @@ function WorkDetail({match}){
                                         <div>
                                             <div className="tabbed">
                                                 <input type="radio" id="tab1" name="tabs" checked></input>
-                                                <input type="radio" id="tab2" name="tabs"></input>
+                                                <input type="radio" id="tab2" name="tabs" ></input>
                                                 <ul className="tabs">
                                                     <li className="tab"><label for="tab1">Screenshot</label></li>
                                                     <li className="tab"><label for="tab2">Live Prototype</label></li>
@@ -148,7 +178,7 @@ function Work({match}){
                                     <div className="work-box">
                                         <img src={work.image} className="image" alt={work.name}></img>
                                         <div className="work-title">
-                                            <h3>{work.name}</h3>
+                                            <h3>{work.name.length > 16 ? work.name.slice(0, 17)+"..." : work.name}</h3>
                                             <button>-&gt;</button>
                                         </div>
                                     </div>

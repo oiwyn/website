@@ -11,6 +11,7 @@
     "react-dom": "^17.0.1",
     "react-figma-embed": "^1.0.1",
     "react-helmet": "^6.1.0",
+    "react-markdown": "^5.0.3",
     "react-router-dom": "^5.2.0",
     "react-router-scroll-top": "^0.2.1",
     "react-scripts": "4.0.1",

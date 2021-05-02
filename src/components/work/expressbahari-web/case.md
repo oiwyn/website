@@ -127,4 +127,4 @@ The survey result came and stated that they are less likely to call branch offic
 ## Another One
 Following the website re-design, the company liked my design direction and asked me whether I could do UI/UX design for their upcoming smartphone app.
 
-Click the "Live Prototype" tab below see those app in action. Or click here to see the design journal for the app.
+Click <a href="./express-bahari-app">here</a> to see the live prototype for the app.

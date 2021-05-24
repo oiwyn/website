@@ -68,6 +68,13 @@ function WorkDetail({match}){
                                 <span>Client</span>
                                 <p>{detail.desc.client}</p>
                             </div>
+                            {detail.desc.credits !== null ?  
+                                (
+                                <div className="credits">
+                                    <span>Credits</span>
+                                    <p>{detail.desc.credits}</p>
+                                </div>  
+                                ) : null}
                             <div>
                                 <span>Tools Used</span>
                                 <p>{detail.desc.tools}</p>

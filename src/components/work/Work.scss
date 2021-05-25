@@ -234,6 +234,9 @@
                             border-radius: 0px 0px 5px 5px;
                             div{
                                 padding: 0px 15px;
+                                &.credits{
+                                    padding-left: 0px;
+                                }
                                 &:first-of-type{
                                     padding-left: 0px;
                                     border-right: 1px solid #ddd;
@@ -242,9 +245,6 @@
                                 &:last-of-type{
                                     border-left: 1px solid #ddd;
                                     border-radius: 0px 5px 5px 0px;
-                                }
-                                .credits{
-                                    padding-left: 0;
                                 }
                                 span{
                                     font-size: 12px;

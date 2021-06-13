@@ -16,7 +16,7 @@ export const workContent = [
             }
         },
         misc:{
-            live: false,
+            live: "https://mangadex.org/",
             figma:{
                 value: false,
                 link: "",   

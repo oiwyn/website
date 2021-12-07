@@ -29,7 +29,7 @@ export default function App() {
                     </Link>
                     <Link to="/resume">
                         <li>
-                            Resume
+                            CV
                         </li>
                     </Link>
                 </ul>

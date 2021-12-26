@@ -18,7 +18,7 @@ export default function Home(){
                     I'm a graphic and user interface designer who loves creating <b>beautiful</b> and <em>delightful</em> design experiences.
                     </h1>
                     <h1>
-                    Currently a UI/UX designer based in Taipei, TW.
+                    Currently looking and open for new opportunities.
                     </h1>
                 </div>
             </section>

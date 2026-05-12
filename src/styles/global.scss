@@ -7,4 +7,11 @@
 body {
   padding: 1rem 1rem;
   background-color: #F6F5F1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }

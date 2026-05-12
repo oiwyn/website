@@ -1,0 +1,38 @@
+---
+const year = new Date().getFullYear();
+---
+ 
+<footer>
+    <p class="quote">
+         <span>"I don't really know how to do footer design, so here it is."</span> <br/> — Owynn, {year}
+    </p>
+    <p>
+        Let's connect: <a href="https://linkedin.com/in/owynn/" target="_blank">LinkedIn</a> · <a href="mailto:kenliwynn@gmail.com">Email</a>
+    </p>
+</footer>
+ 
+<style lang="scss">
+  footer {
+    margin-top: auto;
+    padding-top: 3rem;
+    p{
+        font-family: 'Inter', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 300;
+        color: #aaa;
+        &.quote{
+            color: #bbb;
+            padding-bottom: .25rem;
+            span{
+                font-style: italic;
+            }
+        }
+        a{
+            color: #979797;
+        }
+        @media (max-width: 768px) {
+            text-align: center;
+        }
+    }
+  }
+</style>

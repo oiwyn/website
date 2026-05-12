@@ -1,0 +1,121 @@
+---
+const projects = Object.values(
+  await import.meta.glob('/src/content/projects/*/*.md', { eager: true })
+).sort((a: any, b: any) => {
+  if (b.frontmatter.year !== a.frontmatter.year) {
+    return b.frontmatter.year - a.frontmatter.year;
+  }
+  return b.frontmatter.month - a.frontmatter.month;
+});
+
+const icons = import.meta.glob('/src/content/projects/*/*.{png,jpg,jpeg,webp,svg}', { eager: true });
+const tagColors: Record<string, string> = {
+  'Work': 'tag-work',
+  'Side Project': 'tag-sproj',
+  'Idea': 'tag-idea',
+};
+---
+
+<section>
+  {projects.map((project: any) => {
+    const slug = project.file.split('/').pop().replace('.md', '');
+    const iconFile = project.frontmatter.icon?.replace('./', '');
+    const iconPath = iconFile
+      ? `/src/content/projects/${slug}/${iconFile}`
+      : null;
+    const icon: any = iconPath ? icons[iconPath] : null;
+    return (
+    <a href={`/projects/${slug}`}>
+      <div>
+        {icon && <img src={icon.default.src} alt={project.frontmatter.title} />}
+        <h3 class={project.frontmatter.lang === 'ja' || project.frontmatter.lang === 'zh' ? 'cjk' : ''}>
+            {project.frontmatter.title}
+        </h3>
+        <ul>
+            {project.frontmatter.tags.map((tag: string) => (
+            <li class={`tag ${tagColors[tag] || 'tag-default'}`}>{tag}</li>
+            ))}
+            <li class="year">{project.frontmatter.year}</li>
+        </ul>
+    </div>
+    </a>
+    );
+  })}
+</section>
+
+<style lang="scss">
+    a{
+        color: #111;
+        &:hover{
+            color: #555;
+        }
+		@media (max-width: 768px) {
+            text-decoration: none;
+                div{
+                    margin-top: 10px;
+                    display: block;
+                    h3{
+                        line-height: 2.2rem;
+                        font-size: 2rem;
+                    }
+                    ul{
+                        flex-direction: right;
+                        padding-top: .5rem;
+                        margin-left: 0rem;
+                    }
+                }
+        }
+    }
+    div{
+        margin: .5rem 0rem;
+        display: inline-flex;
+        flex-direction: row;
+        gap: .5rem;
+        width: 100%;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #ddd;
+        h3{
+            font-weight: 300;
+            line-height: 3.2rem;
+        }
+        img{
+            width: 3.2rem;
+            filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.15));
+            border-radius: 9px;
+            flex-grow: 0;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-left: 0.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            font-family: 'Inter', serif;
+            font-size: 1rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            height: fit-content;
+            li{
+                &.tag-work{
+                    background-color: #DCEADE;
+                    padding: .25rem;
+                }
+                &.tag-sproj{
+                    background-color: #DECFEA;
+                    padding: .25rem;
+                }
+                &.tag-idea{
+                    background-color: #CDD8F6;
+                    padding: .25rem;
+                }
+                &.year{
+                    padding: .25rem .5rem;
+                    border-radius: 15px;
+                    outline: 1px solid #ddd;
+                }
+            }
+        }
+    }
+</style>

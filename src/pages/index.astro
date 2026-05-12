@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectList from '../components/ProjectList.astro';
+import { Image } from 'astro:assets';
+import imgCamera from '../assets/web_cam.png';
+import imgCode from '../assets/web_code.png';
+import imgSelf from '../assets/web_self.png';
+---
+<BaseLayout title="Hai!">
+	<section>
+		Hai, I am <Image src={imgSelf} alt="Self" /><span><b>Owynn</b></span>.
+		<br>
+		<br>
+		And as far as I can remember,
+		<br>
+		I've always liked designing <span><b>beautiful</b></span> and <span><i>delightful</i></span> design experiences.
+		<br>
+		<br>
+		I like <Image src={imgCamera} alt="Camera" />taking pictures whenever I have free time, as well.
+		<br>
+		Oh, and I also <Image src={imgCode} alt="Code" />code sometimes, too.
+		<br>
+		<br>
+		Let's <span><b><i>connect</i></b></span>.
+		<br>
+		<div class="contact">
+			<a href="https://path.cv/owynn" class="button" target="_blank">Read my CV</a><p> or </p><a href="mailto:kenliwynn@gmail.com" class="button email">Send me an Email</a>
+		</div>
+	</section>
+	<section class="selected-works">
+		<h2>Ideas, works, and side projects</h2>
+	<ProjectList/>
+	</section>
+</BaseLayout>
+<style lang="scss">
+  section{
+	margin: 4rem 0.7rem 0rem 0.5rem;
+	font-family: 'Fraunces', serif;
+	font-size: 2.25rem;
+	font-weight: 200;
+	letter-spacing: -0.03em;
+	color: #838383;
+	&.selected-works{
+		margin: 1rem 0.5rem;
+		h2{
+			font-family: 'Inter', serif;
+			font-size: 1rem;
+			font-weight: 300;
+			text-transform: uppercase;
+			padding-bottom: 0.5rem;
+		}
+	}
+	img{
+		display: inline-block;
+		height: 2.8rem;
+		width: auto;
+		margin-bottom: -0.65rem;
+		pointer-events: none;
+	}
+	span{
+		color: #413780;
+		b{
+			font-weight: 600;
+			i{
+				font-weight: 600;
+				text-decoration: none !important;
+			}
+		}
+		i{
+			font-weight: 300;
+			text-decoration: underline wavy  rgba(65, 55, 128, 0.5);
+  			text-decoration-thickness: 1px;
+			text-underline-offset: 3px;
+		}
+	}
+	br {
+        display: block;
+        content: "";
+        margin-top: .5rem;
+	}
+	div{
+		display: flex;
+		align-items: center;
+		gap: .65rem;
+  		flex-wrap: wrap;
+		background-image: repeating-linear-gradient(
+			to bottom,
+			transparent,
+			transparent 2px,
+			#ddd 2px,
+			#ddd 3px
+		);
+		background-position: bottom;
+		background-size: 100% 9px;
+		background-repeat: no-repeat;
+		padding-bottom: 1.5rem;
+		p{
+			font-weight: 100;
+			font-size: 1.25rem;
+		}
+		.button{
+			margin-top: .25rem;
+			text-decoration: none;
+			font-family: 'Fraunces', serif;
+			font-size: 1.75rem;
+			font-weight: 200;
+			letter-spacing: -0.03em;
+			color: #000;
+			padding: .55rem .5rem;
+			border-radius: 10px;
+			border: 1px solid #DDDCD9;
+			background-color: white;
+   			transition: all ease-in-out .1s;
+			&.email{
+				color: #413780;
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.04) 100%), #FFFFFF;
+				border: 0.3px solid rgba(189, 196, 255, 0.5);
+				box-shadow: 0px 5px 15px rgba(65, 55, 128, 0.3);
+				&:hover{
+					border: 0.3px solid rgba(189, 196, 255, 0.8);
+					box-shadow: 0px 6px 20px rgba(100, 88, 175, 0.45);
+				}
+				&:active{
+					background: linear-gradient(0deg, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.05) 100%), #FFFFFF;
+				}
+			}
+			&:hover{
+				cursor: pointer;
+				border: 1px solid #ccc;
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.05) 100%), #FFFFFF;
+			}
+			&:active{
+				background: #f5f5f5;
+				color: #444;
+				transform: scale(0.99);
+			}
+		}
+		@media (max-width: 768px) {
+      		flex-direction: column;
+			p{
+				background-color: #f5f5f5;
+				border-radius: 50px;
+				border: 1px solid #DDDCD9;
+				font-size: 1rem;
+				padding: .5rem 1rem;
+				margin: -1.35rem 0rem -1.1rem 0rem;
+				z-index: -1;
+			}
+			.button{
+				text-align: center;
+				width: 100%;
+			}
+    	}
+	}
+  }
+</style>

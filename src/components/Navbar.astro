@@ -1,0 +1,125 @@
+---
+const { section } = Astro.props;
+const currentPath = Astro.url.pathname;
+import logo from '../assets/ok_logo.svg?raw';
+---
+<div class="container">
+    <nav>
+        <div class="nav-logo">
+            <a href="/" class="logo">
+                <Fragment set:html={logo} />
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="/" 
+                class={`${currentPath === "/" || currentPath.startsWith("/projects/") ? "active" : ""} ${section ? "nav-home" : ""}`}
+                data-tooltip="Go back to @Home"
+            >
+            {currentPath.startsWith("/projects/") ? (section || "Project") : "Home"}
+            </a>
+        </div>
+    </nav>
+</div>
+
+<style lang="scss">
+    .container {
+        width: 100%;
+        display: flex;
+    }
+
+    nav {
+        z-index: 1;
+        position: fixed;
+        display: flex;
+        padding: .3rem .25rem;
+        width: fit-content;
+        gap: .3rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        letter-spacing: -0.03em;
+        border: 1px solid #e8e8e8;
+        border-radius: 7px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 8px 32px rgba(0, 0, 0, 0.12);
+        align-items: center;
+        color: #e5e5e5;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.05) 100%), rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+    @media (max-width: 768px) {
+        width: calc(100% - 2rem);
+        justify-content: space-between;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .nav-links{
+        display: flex;
+        align-items: center;
+        gap: .1rem;
+        color: #e3e3e3;
+        .nav-home {
+            position: relative;
+            transition: all ease-in-out .05s;
+            &::after {
+                content: attr(data-tooltip);
+                position: absolute;
+                top: calc(100% + 0.5rem);
+                left: 50%;
+                transform: translateX(-50%);
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.05) 100%), rgba(255, 255, 255, 1);
+                color: #999;
+                font-size: .7rem;
+                padding: 0.25rem 0.5rem;
+                border-radius: .5rem;
+                border: 1px solid #ddd;
+                white-space: nowrap;
+                opacity: 0;
+                pointer-events: none;
+            }
+            &:hover::after {
+                opacity: 1;
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+        color: #a2a2a2;
+        padding: .3rem .5rem;
+        transition: all ease-in-out .05s;
+
+        @media (max-width: 768px) {
+            flex: 1;
+            text-align: center;
+        }
+
+        &.logo {
+            opacity: .5;
+            flex: 0; // logo doesn't stretch
+            &:hover { 
+                opacity: 1; 
+            }
+        }
+
+        &.active {
+            font-weight: 400;
+            color: #413780;
+            &::before {
+                content: "You are @";
+                color: rgba(65, 55, 128, 0.25);
+                margin-right: -0.2rem;
+            }
+        }
+
+        &:hover {
+            background-color: #eee;
+            border-radius: 3.5px;
+            box-shadow: 0 -1px 0 #ddd;
+        }
+
+        &:active {
+            background-color: #e5e5e5;
+            color: #717171;
+        }
+    }
+    }
+</style>

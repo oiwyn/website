@@ -37,7 +37,7 @@ Surprisingly Simple Answer:
 
 ### Process Overview
 ![](./img/img1.svg)
-*Process overview of this landing page design project*
+*Process overview of this landing page design project.*
 
 ### Ideation
 ## Brainstorming
@@ -51,7 +51,7 @@ Feeling stuck, I quickly arranged a few mood boards that I can use to refer to t
 ## Colors and Font
 After a few design iterations, I settled on apricot-orange as the website's primary color to go with Masahiro's iconic green and the PingFang TC as the main font family that will complement well with the simple, aesthetically pleasing landing page that I'm going for.
 ![](./img/img2.svg)
-*The font and color scheme of the landing page*
+*The font and color scheme of the landing page.*
 
 ### Wireframing and Prototyping
 ## Blueprint
@@ -62,13 +62,13 @@ During the initial design process (wireframing), there are three main points tha
 
 After taking into consideration of those three points, I went to draw a few sketches to get a rough idea of how the layout would look like.
 ![](./img/img3.webp)
-*Few low fidelity wireframes of the landing page*
+*Few low fidelity wireframes of the landing page.*
 <br>
 
 ## Cleaning Up
 After receiving enough feedback regarding the three initial layouts, I decided to create a new layout that combined the three layouts' strong suits and adds few layout optimizations to make it clearer and more simple.
 ![](./img/img4.webp)
-*High fidelity wireframe of the landing page, notice the usage of the wave-ish effect, used to add awamori's accent to the page*
+*High fidelity wireframe of the landing page, notice the usage of the wave-ish effect, used to add awamori's accent to the page.*
 
 Since the main objective of the design is only to inform user targets about Masahiro's awamori, there was only one CTA section, urging users to scroll down to know more about the product and the rest are all content that was provided by the client albeit tweaked a bit to fit the website layout better.
 

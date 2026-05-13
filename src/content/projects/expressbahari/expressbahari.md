@@ -41,7 +41,7 @@ Goal:
 
 ### Process Overview
 ![](./img/img1.svg)
-*Process overview of this landing page design project*
+*Process overview of this landing page design project.*
 
 ### User Research
 ## Clarifying the Problem
@@ -67,12 +67,12 @@ Moving forward, I created 3 personas of Express Bahari website users.
 2. Another is new clients that want to know the ticket prices and want to know whether a ticket refund is possible or not,
 3. And the third is the existing clients that want to make sure and know if the ferry schedule is unchanged
 ![](./img/img2.webp)
-*Thee separate different personas*
+*Thee separate different personas.*
 <br>
 
 ## User Journey
 ![](./img/img3.svg)
-*User journey, pain points highlighted by the greyed out sad emojis*
+*User journey, pain points highlighted by the greyed out sad emojis.*
 
 ### Wireframing and Prototyping
 ## Confusing Site Map and Layout
@@ -94,9 +94,9 @@ With my shiny new user flow as my base, I sketched various new user interfaces w
 
 I also did rapid prototyping to make sure that everything is A-OK before moving on to the more hi-fi prototypes.
 ![](./img/img5.webp)
-*Low fidelity wireframes of the website*
+*Low fidelity wireframes of the website.*
 ![](./img/img6.webp)
-*Few screenshots of the high fidelity wireframes*
+*Few screenshots of the high fidelity wireframes.*
 <br>
 
 ## Let There Be Light
@@ -113,7 +113,7 @@ I chose Open Sans as my main font family, as it is clean, neutral, friendly yet 
 
 As for the main colors, I decided to use the company's existing logo as my base which ended up me reducing the intensity of the highly noisy red and blue colors on it as it would give the website a more modern feel while still being friendly and open to new users.
 ![](./img/img7.svg)
-*The font and color scheme of the website*
+*The font and color scheme of the website.*
 
 ### Development
 ## The Hard(ish) Part Begins

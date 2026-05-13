@@ -25,11 +25,11 @@ EventME was split into two versions: a “Lite” version and a “Pro” versio
 
 The Lite version was designed primarily for on-campus use, meaning its features focused on campus-related activities such as daily course information, assignment due date reminders, and on-campus appointment scheduling synced with a smart band (I used the Samsung Gear Fit as the screen canvas).
 ![](./img/img1.webp)
-*Lite version of the app. When the student logs in for the first time, they will be taken straight to the smart band sync tutorial screen*
+*Lite version of the app. When the student logs in for the first time, they will be taken straight to the smart band sync tutorial screen.*
 ![](./img/img2.webp)
-*They will then be taken to the Home, where they can access various features as seen above. They will also be able to freely edit the smart band UI from here*
+*They will then be taken to the Home, where they can access various features as seen above. They will also be able to freely edit the smart band UI from here.*
 ![](./img/img3.webp)
-*Settings and User screens. The app allows a somewhat level of customization*
+*Settings and User screens. The app allows a somewhat level of customization.*
 ![](./img/img4.webp)
 *Adding an event*
 <br>
@@ -39,9 +39,9 @@ Alongside an “Around Me” feature that allowed students to browse nearby even
 
 Hence the name, EventME.
 ![](./img/img5.webp)
-*Home screen, detailed location page, and bus stop integration*
+*Home screen, detailed location page, and bus stop integration.*
 ![](./img/img6.webp)
-*The expanded hamburger menu, and the setttings page*
+*The expanded hamburger menu, and the setttings page.*
 
 ### Context
 Even though Figma already existed at the time, I unfortunately did not hear about it until early 2018.

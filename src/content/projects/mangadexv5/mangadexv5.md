@@ -34,19 +34,19 @@ When I first joined the design team, Arvid immediately asked me to start working
 - A manga detail page, including finding a way to display multiple available languages without making the interface feel overwhelming
 
 ![](./img/img1.webp)
-*Left to right, mobile homepage, search result page, and the expanded hamburger menu*
+*Left to right, mobile homepage, search result page, and the expanded hamburger menu.*
 
 As for the manga detail page, we ended up choosing Spotify individual artist page design as our main inspiration (pictured below):
 ![](./img/img2.webp)
 *Recent screenshot, but you get the idea - see that big header title and that glorious subtle gradient effect?*
 ![](./img/img3.webp)
-*Using that as inspiration, this was what I came up with*
+*Using that as inspiration, this was what I came up with.*
 
 Since the manga detail page is the second most important area where users spend most of their time interacting with the site, we took our time to make sure it both worked and looked right.
 
 While waiting for input from other team members, I decided to start tackling the manga reader page instead - as this is probably where users spend most of their time interacting with the platform, so creating as many design explorations as possible for this page felt like a good idea since this allowed us to iterate and evaluate which designs worked well and which did not.
 ![](./img/img4.webp)
-*Ta-da, in hindsight I probably should’ve chosen a darker shade of grey for the background to better differentiate the manga page from the background, but oh well*
+*Ta-da, in hindsight I probably should’ve chosen a darker shade of grey for the background to better differentiate the manga page from the background, but oh well.*
 
 ### Context
 The screenshots I am able to share above are limited, as I had to leave the team at the time to focus on my career instead.

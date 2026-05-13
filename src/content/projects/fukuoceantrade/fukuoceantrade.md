@@ -36,7 +36,7 @@ With the first half of the project done, I moved on to the second part - web des
 
 From the start, I knew that I wanted the website to make potential customers feel a sense of trust. With that in mind, I began sketching out (not pictured here, sorry!) the layout and drafting the website content, shaping both around that core idea.
 ![](./img/ss-1.webp)
-*A brief introduction section with Indra's face right under the hero section*
+*A brief introduction section with Indra's face right under the hero section.*
 
 After some back-and-forth discussion with Indra himself, he agreed with my suggestion to feature his photo and his haul in the homepage hero section.
 

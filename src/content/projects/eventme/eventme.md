@@ -31,7 +31,7 @@ The Lite version was designed primarily for on-campus use, meaning its features 
 ![](./img/img3.webp)
 *Settings and User screens. The app allows a somewhat level of customization.*
 ![](./img/img4.webp)
-*Adding an event*
+*Adding an event.*
 <br>
 And the Pro version, on the other hand, was designed for off-campus use. It included a Google Maps-like navigation feature with bus stop integration (something that did not exist yet or was not well implemented in Singapore at the time).
 

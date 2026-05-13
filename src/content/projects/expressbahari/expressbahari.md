@@ -84,7 +84,7 @@ And to make matter worse, most of the navigation links are only present on the b
 
 With those points in mind, I used the card sorting method to reorganize and figured out what’s the best way for users to navigate through the website.
 ![](./img/img4.webp)
-*The pages sorted by "cards", each color block represents different things; blue for section, purple for function, and green for head section*
+*The pages sorted by "cards", each color block represents different things; blue for section, purple for function, and green for head section.*
 
 As users said that they expected a quick and fast way to access office locations and contact information whenever they are looking to book a ticket, I created a new user flow, so that it can guide my design decisions later.
 <br><br>

@@ -1,6 +1,6 @@
 ---
 title: "EventME"
-icon: "./icon.png"
+icon: "./icon.webp"
 header: "./header.webp"
 year: "2017"
 month: 0

@@ -1,6 +1,6 @@
 ---
 title: "Fuku Ocean Trade"
-icon: "./icon.png"
+icon: "./icon.webp"
 header: "./header.webp"
 year: "2025"
 month: 3

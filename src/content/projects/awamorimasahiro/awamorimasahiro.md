@@ -1,6 +1,6 @@
 ---
 title: "泡盛まさひろ台灣"
-icon: "./icon.png"
+icon: "./icon.webp"
 header: "./header.webp"
 year: "2020"
 month: 12

@@ -1,6 +1,6 @@
 ---
 title: "Express Bahari"
-icon: "./icon.png"
+icon: "./icon.webp"
 header: "./header.webp"
 year: "2020"
 month: 1

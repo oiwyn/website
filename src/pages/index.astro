@@ -5,6 +5,7 @@ import { Image } from 'astro:assets';
 import imgCamera from '../assets/web_cam.png';
 import imgCode from '../assets/web_code.png';
 import imgSelf from '../assets/web_self.png';
+import imgResume from '../assets/web_resume.png';
 ---
 <BaseLayout title="Hai!">
 	<section>
@@ -24,7 +25,17 @@ import imgSelf from '../assets/web_self.png';
 		Let's <span><b><i>connect</i></b></span>.
 		<br>
 		<div class="contact">
-			<a href="https://path.cv/owynn" class="button" target="_blank">Read my CV</a><p> or </p><a href="mailto:owynn@owynnkenli.com" class="button email">Send me an Email</a>
+			<div class="resume">
+				<a href="https://path.cv/owynn" class="button" target="_blank">Read my CV</a>
+				<div class="side">
+					<a href="./Resume.pdf">
+						<Image src={imgResume} alt="Resume"/>
+						<span class="tooltip">Download my Resume</span>
+					</a>
+				</div>
+			</div>
+			<p> or </p>
+			<a href="mailto:owynn@owynnkenli.com" class="button email">Send me an Email</a>
 		</div>
 	</section>
 	<section class="selected-works">
@@ -79,78 +90,172 @@ import imgSelf from '../assets/web_self.png';
         margin-top: .5rem;
 	}
 	div{
-		display: flex;
-		align-items: center;
-		gap: .65rem;
-  		flex-wrap: wrap;
-		background-image: repeating-linear-gradient(
-			to bottom,
-			transparent,
-			transparent 2px,
-			#ddd 2px,
-			#ddd 3px
-		);
-		background-position: bottom;
-		background-size: 100% 9px;
-		background-repeat: no-repeat;
-		padding-bottom: 1.5rem;
-		p{
-			font-weight: 100;
-			font-size: 1.25rem;
-		}
-		.button{
-			margin-top: .25rem;
-			text-decoration: none;
-			font-family: 'Fraunces', serif;
-			font-size: 1.75rem;
-			font-weight: 200;
-			letter-spacing: -0.03em;
-			color: #000;
-			padding: .55rem .5rem;
-			border-radius: 10px;
-			border: 1px solid #DDDCD9;
-			background-color: white;
-   			transition: all ease-in-out .1s;
-			&.email{
-				color: #413780;
-				background: linear-gradient(180deg, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.04) 100%), #FFFFFF;
-				border: 0.3px solid rgba(189, 196, 255, 0.5);
-				box-shadow: 0px 5px 15px rgba(65, 55, 128, 0.3);
-				&:hover{
-					border: 0.3px solid rgba(189, 196, 255, 0.8);
-					box-shadow: 0px 6px 20px rgba(100, 88, 175, 0.45);
+		&.contact{
+			display: flex;
+			align-items: center;
+			gap: .65rem;
+			flex-wrap: wrap;
+			background-image: repeating-linear-gradient(
+				to bottom,
+				transparent,
+				transparent 2px,
+				#ddd 2px,
+				#ddd 3px
+			);
+			background-position: bottom;
+			background-size: 100% 9px;
+			background-repeat: no-repeat;
+			padding-bottom: 1.5rem;
+			.resume{
+				display: flex;
+				align-items: center;
+				.button{
+					border-radius: 10px 0 0 10px;
 				}
-				&:active{
-					background: linear-gradient(0deg, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.05) 100%), #FFFFFF;
+				.side{
+					position: relative;
+					margin-top: .2rem;
+					a{
+						position: relative;
+						padding: .2rem .1rem .25rem .1rem;
+						border-radius: 0 10px 10px 0;
+						border: 1px solid #DDDCD9;
+						border-left: none;
+						background: linear-gradient(0deg, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.05) 100%), rgba(255, 255, 255, 0);
+						transition: all ease-in-out .1s;
+						img{
+							display: inline-block;
+							height: 2.8rem;
+							width: auto;
+							margin-bottom: -0.65rem;
+							pointer-events: none;
+							filter: grayscale(100%);
+							opacity: .7;
+						}
+						&:hover{
+							background: linear-gradient(180deg, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.05) 100%), rgba(255, 255, 255, .5);
+							img{
+								filter: grayscale(0%);
+								opacity: 1;
+							}
+						}
+						&:active{
+							background: #eee;
+						}
+					}
+					.tooltip {
+						opacity: 0;
+						pointer-events: none;
+						position: absolute;
+						top: calc(100% + .5rem);
+						right: .35rem;
+						left: auto;
+						transform: none;
+						color: #999;
+						font-size: .75rem;
+						font-family: 'Inter', sans-serif;
+						font-weight: 300;
+						letter-spacing: -0.03em;
+						padding: 0.3rem 0.6rem;
+						border-radius: .5rem;
+						border: 1px solid #ddd;
+						white-space: nowrap;
+						background: linear-gradient(180deg, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.05) 100%), rgba(255, 255, 255, 1);
+						box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+						z-index: 1;
+						transition: all ease-in-out .1s;
+						&::before {
+							content: "";
+							position: absolute;
+							top: -5rem;
+							left: 0;
+							right: 0;
+							height: .5rem;
+						}
+						&::after {
+							content: "";
+							position: absolute;
+							top: -.27rem;
+							right: 16.5%;
+							transform: translateX(-50%) rotate(45deg);
+							width: 8px;
+							height: 8px;
+							background: white;
+							border-left: 1px solid #ddd;
+							border-top: 1px solid #ddd;
+						}
+					}
+					&:hover .tooltip {				
+						opacity: 1;
+						pointer-events: auto;
+					}
+				}
+				@media (max-width: 768px) {
+					width: 100%;
+					.button {
+						flex: 1;
+						text-align: center;
+					}
 				}
 			}
-			&:hover{
-				cursor: pointer;
-				border: 1px solid #ccc;
-				background: linear-gradient(180deg, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.05) 100%), #FFFFFF;
-			}
-			&:active{
-				background: #f5f5f5;
-				color: #444;
-				transform: scale(0.99);
-			}
-		}
-		@media (max-width: 768px) {
-      		flex-direction: column;
 			p{
-				background-color: #f5f5f5;
-				border-radius: 50px;
-				border: 1px solid #DDDCD9;
-				font-size: 1rem;
-				padding: .5rem 1rem;
-				margin: -1.1rem 0rem;
-				z-index: -1;
+				font-weight: 100;
+				font-size: 1.25rem;
 			}
 			.button{
-				text-align: center;
-				width: 100%;
+				margin-top: .25rem;
+				text-decoration: none;
+				font-family: 'Fraunces', serif;
+				font-size: 1.75rem;
+				font-weight: 200;
+				letter-spacing: -0.03em;
+				color: #000;
+				padding: .55rem .5rem;
+				border-radius: 10px;
+				border: 1px solid #DDDCD9;
+				background-color: white;
+				transition: all ease-in-out .1s;
+				&.email{
+					color: #413780;
+					background: linear-gradient(180deg, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.04) 100%), #FFFFFF;
+					border: 0.3px solid rgba(189, 196, 255, 0.5);
+					box-shadow: 0px 5px 15px rgba(65, 55, 128, 0.3);
+					&:hover{
+						border: 0.3px solid rgba(189, 196, 255, 0.8);
+						box-shadow: 0px 6px 20px rgba(100, 88, 175, 0.45);
+					}
+					&:active{
+						background: linear-gradient(0deg, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.05) 100%), #FFFFFF;
+					}
+				}
+				&:hover{
+					cursor: pointer;
+					border: 1px solid #ccc;
+					background: linear-gradient(180deg, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.05) 100%), #FFFFFF;
+				}
+				&:active{
+					background: #f5f5f5;
+					color: #444;
+					transform: scale(0.99);
+				}
 			}
-    	}
+			@media (max-width: 768px) {
+				flex-direction: column;
+				p{
+					background-color: #f5f5f5;
+					border-radius: 50px;
+					border: 1px solid #DDDCD9;
+					font-size: 1rem;
+					padding: .5rem 1rem;
+					margin: -1.1rem 0rem;
+					z-index: -1;
+				}
+				.button{
+					text-align: center;
+					width: 100%;
+				}
+			}
+		}
 	}
   }
 </style>

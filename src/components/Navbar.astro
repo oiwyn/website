@@ -13,7 +13,7 @@ import logo from '../assets/ok_logo.svg?raw';
         <div class="nav-links">
             <a href="/" 
                 class={`${currentPath === "/" || currentPath.startsWith("/projects/") ? "active" : ""} ${section ? "nav-home" : ""}`}
-                data-tooltip="Go back to @Home"
+                data-tooltip="Go back to Home"
             >
             {currentPath.startsWith("/projects/") ? (section || "Project") : "Home"}
             </a>
@@ -62,9 +62,8 @@ import logo from '../assets/ok_logo.svg?raw';
             &::after {
                 content: attr(data-tooltip);
                 position: absolute;
-                top: calc(100% + 0.5rem);
-                left: 50%;
-                transform: translateX(-50%);
+                top: calc(100% - .25rem);
+                right: 0%;
                 background: linear-gradient(180deg, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.05) 100%), rgba(255, 255, 255, 1);
                 color: #999;
                 font-size: .7rem;
@@ -74,6 +73,7 @@ import logo from '../assets/ok_logo.svg?raw';
                 white-space: nowrap;
                 opacity: 0;
                 pointer-events: none;
+                
             }
             &:hover::after {
                 opacity: 1;

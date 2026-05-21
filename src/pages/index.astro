@@ -10,20 +10,20 @@ import imgResume from '../assets/web_resume.png';
 <BaseLayout title="Hai!">
 	<section>
 		Hai, I am <Image src={imgSelf} alt="Self" /><span><b>Owynn</b></span>.
-		<br>
-		<br>
+		<div class="br"/>
+		<div class="br"/>
 		And as far as I can remember,
-		<br>
+		<div class="br"/>
 		I've always liked designing <span><b>beautiful</b></span> and <span><i>delightful</i></span> design experiences.
-		<br>
-		<br>
+		<div class="br"/>
+		<div class="br"/>
 		I like <Image src={imgCamera} alt="Camera" />taking pictures whenever I have free time, as well.
-		<br>
+		<div class="br"/>
 		Oh, and I also <Image src={imgCode} alt="Code" />code sometimes, too.
-		<br>
-		<br>
+		<div class="br"/>
+		<div class="br"/>
 		Let's <span><b><i>connect</i></b></span>.
-		<br>
+		<div class="br"/>
 		<div class="contact">
 			<div class="resume">
 				<a href="https://path.cv/owynn" class="button" target="_blank">Read my CV</a>
@@ -51,6 +51,11 @@ import imgResume from '../assets/web_resume.png';
 	font-weight: 200;
 	letter-spacing: -0.03em;
 	color: #838383;
+	.br {
+        display: block;
+        content: "";
+        padding-top: .75rem;
+	}
 	&.selected-works{
 		margin: 1rem 0.5rem;
 		h2{
@@ -83,11 +88,6 @@ import imgResume from '../assets/web_resume.png';
   			text-decoration-thickness: 1px;
 			text-underline-offset: 3px;
 		}
-	}
-	br {
-        display: block;
-        content: "";
-        margin-top: .5rem;
 	}
 	div{
 		&.contact{

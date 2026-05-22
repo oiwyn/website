@@ -49,9 +49,17 @@ import Footer from '../components/Footer.astro';
     );
   }
   img{
-    width: 24;
+    width: 24rem;
     height: auto;
     opacity: .05;
+  }
+  @media (max-width: 768px) {
+    top: -1rem;
+    right: 50%;
+    transform: translateX(50%);
+    img{
+      width: 30rem;
+    }
   }
 }
 </style>

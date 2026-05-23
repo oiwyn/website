@@ -12,7 +12,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.2.2"
+    "acorn": "^8.16.0",
+    "astro": "^6.2.2",
+    "astro-vtbot": "^2.1.12"
   },
   "devDependencies": {
     "sass": "^1.99.0"

@@ -14,10 +14,20 @@
     pointer-events: none;
   }
 
+  #vtbot-loading-indicator::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(246, 245, 241, 1) 5%,
+        rgba(246, 245, 241, 0) 100%
+  )
+  }
+
   #vtbot-loading-indicator img {
     width: 100%;
     height: auto;
-    color: black;
   }
 
   html.loading #vtbot-loading-indicator {

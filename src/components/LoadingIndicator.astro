@@ -1,0 +1,43 @@
+---
+import VtbotLoadingIndicator from 'astro-vtbot/components/LoadingIndicator.astro';
+---
+
+<VtbotLoadingIndicator />
+
+<div id="vtbot-loading-indicator">
+  <img src="/bg_logo.svg" alt="Loading" />
+</div>
+
+<style is:global>
+#vtbot-loading-indicator {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 24rem;
+    height: auto;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#vtbot-loading-indicator img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+#vtbot-loading-indicator {
+    display: none;
+}
+
+html.loading #vtbot-loading-indicator {
+    animation: vtbot-blink 1s infinite;
+}
+
+@keyframes vtbot-blink {
+    0%, 30%  { opacity: 0; }
+    40%      { opacity: 0.5; }
+    50%, 60% { opacity: 0; }
+    80%      { opacity: 0.3; }
+}
+</style>

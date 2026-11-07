@@ -9,7 +9,7 @@ import imgResume from '../assets/web_resume.png';
 ---
 <BaseLayout title="Hai!">
 	<section>
-		Hai, I am <Image src={imgSelf} alt="Self" /><span><b>Owynn</b></span>.
+		Hai, I am <a href="https://instagram.com/oiwyn" target="_blank" class="hover"><Image src={imgSelf} alt="Self" /><span><b>Owynn</b></span></a>
 		<div class="br"/>
 		<div class="br"/>
 		<div class="br"/>
@@ -19,9 +19,9 @@ import imgResume from '../assets/web_resume.png';
 		<div class="br"/>
 		<div class="br"/>
 		<div class="br"/>
-		I like <Image src={imgCamera} alt="Camera" />taking pictures whenever I have free time, as well.
+		I like <a href="https://instagram.com/owynn.jpg" target="_blank" class="hover"><Image src={imgCamera} alt="Camera" />taking pictures</a> whenever I have free time, as well.
 		<div class="br"/>
-		Oh, and I also <Image src={imgCode} alt="Code" />code sometimes, too.
+		Oh, and I also <a href="https://github.com/oiwyn" target="_blank" class="hover"><Image src={imgCode} alt="Code" />code</a> sometimes, too.
 		<div class="br"/>
 		<div class="br"/>
 		<div class="br"/>
@@ -46,6 +46,26 @@ import imgResume from '../assets/web_resume.png';
 	<ProjectList/>
 	</section>
 </BaseLayout>
+<script>
+	const canHover = matchMedia('(hover: hover) and (pointer: fine)').matches;
+	const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+	if (canHover && !reduceMotion) {
+		document.querySelectorAll<HTMLElement>('.hover').forEach((el) => {
+			el.addEventListener('mousemove', (e) => {
+				const r = el.getBoundingClientRect();
+				const x = ((e.clientX - r.left - r.width / 2) / r.width) * 10;
+				const y = ((e.clientY - r.top - r.height / 2) / r.height) * 8;
+				el.style.setProperty('--mx', `${x.toFixed(1)}px`);
+				el.style.setProperty('--my', `${y.toFixed(1)}px`);
+			});
+			el.addEventListener('mouseleave', () => {
+				el.style.setProperty('--mx', '0px');
+				el.style.setProperty('--my', '0px');
+			});
+		});
+	}
+</script>
 <style lang="scss">
   section{
 	margin: 4rem 0.7rem 0rem 0.5rem;
@@ -54,6 +74,57 @@ import imgResume from '../assets/web_resume.png';
 	font-weight: 200;
 	letter-spacing: -0.03em;
 	color: #838383;
+	a{
+		color: #413780;
+		text-decoration: none;
+		&.hover{
+			position: relative;
+			isolation: isolate;
+			display: inline-block;
+			padding: .25rem .6rem .25rem .4rem;
+			margin: -.25rem -.6rem -.25rem -.4rem;
+			translate: var(--mx, 0px) var(--my, 0px);   // set by the script below
+			transition: color .2s ease, translate .4s cubic-bezier(.2, .8, .2, 1);  // springy return
+			&::before{
+				content: "";
+				position: absolute;
+				inset: 0;
+				z-index: -1;
+				border-radius: 14px;                     // fallback for Safari/Firefox
+				background:
+					linear-gradient(0deg, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.05) 100%),rgba(65, 55, 128, 0.05);
+				border-bottom: .75px solid rgba(65, 55, 128, 0.05);
+				opacity: 0;
+				transform: scale(.9);
+				translate: calc(var(--mx, 0px) * -.45) calc(var(--my, 0px) * -.45);
+				transition: opacity .15s ease, transform .3s cubic-bezier(.2, .8, .2, 1), translate .4s cubic-bezier(.2, .8, .2, 1);
+
+				@supports (corner-shape: squircle){
+					corner-shape: squircle;
+					border-radius: 20px;                 // squircle needs a bigger radius to look equally round
+				}
+			}
+			img{
+				transition: scale .3s cubic-bezier(.2, .8, .2, 1);
+			}
+			&:hover{
+				color: hsl(248, 40%, 46%);
+				transition: color .2s ease, translate .15s ease-out;
+				transform: scale(1.01);
+				&::before{
+					opacity: 1;
+					transform: scale(1);
+					transition: opacity .15s ease, transform .3s cubic-bezier(.2, .8, .2, 1), translate .15s ease-out;
+				}
+				img{
+					scale: 1.05;
+				}
+			}
+			&:active::before{
+				transform: scale(.965);
+			}
+		}
+	}
 	.br {
         display: block;
         content: "";

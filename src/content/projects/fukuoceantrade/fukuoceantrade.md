@@ -84,6 +84,8 @@ This whole project took about a month to complete, and overall I’m quite satis
 
 Since then, Fuku Ocean Trade has grown quite a bit.
 
-It now exports seafood to two new countries, Vietnam and Malaysia, where many of its clients first discovered the business through the website. Closer to home, as of November 2026, it also supplies a growing list of restaurants (Mövenpick being one of them!) across Jakarta and Tangerang.
+It now exports seafood to two new countries, Vietnam and Malaysia, where many of its clients first discovered the business through the website.
+
+Closer to home, as of November 2026, it also supplies a growing list of restaurants (Mövenpick being one of them!) across Jakarta and Tangerang.
 
 Good fortune indeed.

@@ -12,7 +12,8 @@ const icons = import.meta.glob('/src/content/projects/*/*.{png,jpg,jpeg,webp,svg
 const tagColors: Record<string, string> = {
   'Work': 'tag-work',
   'Side Project': 'tag-sproj',
-  'Idea': 'tag-idea',
+  'Concept': 'tag-concept',
+  'App': 'tag-app',
 };
 ---
 
@@ -121,8 +122,12 @@ const tagColors: Record<string, string> = {
                     background-color: #DECFEA;
                     padding: .25rem;
                 }
-                &.tag-idea{
+                &.tag-concept{
                     background-color: #CDD8F6;
+                    padding: .25rem;
+                }
+                &.tag-app{
+                    background-color: #eacfcf;
                     padding: .25rem;
                 }
                 &.year{

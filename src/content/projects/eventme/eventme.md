@@ -10,7 +10,7 @@ for:
 discipline:
   - Product Design
 tags:
-  - Idea
+  - Concept
 ---
 # Brief
 My capstone project for my bachelor’s degree was to create an app design that combines strong UI and UX to make student life easier both on and off campus.

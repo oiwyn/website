@@ -15,8 +15,8 @@ tags:
   - App
   - Side Project
 links:
-  - url: "#"
+  - url: "https://apps.apple.com/id/app/selembar/id6838606297"
     type: "appstore"
 ---
 # Brief
-Can't share much, since the app is still on review. Stay tuned!
+This project is locked, contact me to gain access.
